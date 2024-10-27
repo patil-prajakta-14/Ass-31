@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dress Preview</title>
+
+    <style>
+        #main-product-img{
+            width: 300px;
+            height: 400px;
+            padding: 40px 60px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0 black;
+            display: block;
+            margin: 30px auto;
+        }
+        .product-imgs-container{
+            display: flex;
+            justify-content: center;
+            object-fit: cover;
+        }
+        .product-img{
+            height: 70px;
+            width: 70px;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="img1.png" id="main-product-img"/>
+
+    <div class="product-imgs-container">
+
+        <img src="img1.png" class="product-img" onclick="changeImg(1)"/>
+        <img src="img2.png" class="product-img" onclick="changeImg(2)"/>
+        <img src="img3.png" class="product-img" onclick="changeImg(3)"/>
+        <img src="img4.png" class="product-img" onclick="changeImg(4)"/>
+        <img src="img5.png" class="product-img" onclick="changeImg(5)"/>
+    </div>
+
+    <script>
+        function changeImg(num)
+        {
+            const mainImg = document.getElementById('main-product-img');
+
+            if(num==1){
+                mainImg.src= "img1.png";
+            }
+            else if(num==2){
+                mainImg.src= "img2.png";
+            }
+            else if(num==3){
+                mainImg.src= "img3.png";
+            }
+            else if(num==4){
+                mainImg.src= "img4.png";
+            }
+            else if(num==5){
+                mainImg.src= "img5.png";
+            }
+        }
+    </script>
+</body>
+</html>
